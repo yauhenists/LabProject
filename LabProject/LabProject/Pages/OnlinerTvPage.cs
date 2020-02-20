@@ -20,7 +20,8 @@ namespace LabProject.Pages
         public By GooglePlayLink { get; } =
             By.XPath("//a[@class='schema-filter__store-item schema-filter__store-item_google']");
 
-        public By AdvertisementLink { get; } = By.XPath("//div[@class='gwd-page-content gwd-page-size']"); //div[@id='Stage']/..
+        public By AdvertisementLink { get; } = By.XPath("//div[@class=\"schema-block\"]/div/a"); //div[@id='Stage']/..
+        //"//div[@class='gwd-page-content gwd-page-size']"
 
 
         public IReadOnlyList<string> Pages;

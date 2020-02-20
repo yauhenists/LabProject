@@ -42,16 +42,16 @@ namespace LabProject.Tests
             OnlinerTvPage page = new OnlinerTvPage(Driver);
             page.OpenStartPage();
             AppStorePage appStorePage = page.OpenAppStorePage();
-            AssertThat(ExpectedConditions.TitleIs("‎Каталог Onliner on the App Store"));
+            //AssertThat(ExpectedConditions.TitleIs("‎Каталог Onliner on the App Store"));
             Assert.AreEqual("‎Каталог Onliner on the App Store", GetCurrentWindowTitle());
 
             GoToWindow(page.ThisPage);
-            AssertThat(ExpectedConditions.TitleIs("Телевизор купить в Минске"));
+            //AssertThat(ExpectedConditions.TitleIs("Телевизор купить в Минске"));
             Assert.AreEqual("Телевизор купить в Минске", GetCurrentWindowTitle());
 
             GooglePlayPage googlePlayPage = page.OpenGooglePlayPage();
             AssertThat(ExpectedConditions.TitleIs("Каталог Onliner - Apps on Google Play"));
-            Assert.AreEqual("Каталог Onliner - Apps on Google Play", GetCurrentWindowTitle());
+            Assert.AreEqual("Каталог Onliner - Apps on Google Play", GetCurrentWindowTitle());//duplicate of the previous Assert
             Assert.AreEqual(3, GetNumberOfWindows());
 
             SimilarAppsPage similarAppsPage = googlePlayPage.GoToSimilarAppsPage();
